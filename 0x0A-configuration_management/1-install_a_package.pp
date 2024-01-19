@@ -1,16 +1,16 @@
 #!usr/bin/pup
 # Install a specific version of Flask
-package {'python3-pip':
+package { 'python3-pip':
 	ensure	=> installed,
 }
 
-package {'flask':
+package { 'flask':
 	ensure	=> '2.1.0',
 	provider	=> 'pip',
 	require	=> Package['python3-pip'],
 }
 
-package {'werkzeug':
+package { 'werkzeug':
 	ensure	=> '2.1.1',
 	provider	=> 'pip',
 	require	=> Package['python3-pip'],
