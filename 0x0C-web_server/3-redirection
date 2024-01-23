@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get install nginx -y
 sudo ufw allow 'Nginx HTTP'
 
-echo 'Hello World!' | sudo tee /var/www/html/index.html
+echo 'Hello World!' | sudo tee /var/www/html/index.html > /dev/null
 
 string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/medazza permanent;"
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
