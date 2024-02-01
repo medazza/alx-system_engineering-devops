@@ -1,0 +1,151 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 https://deb.nodesource.com/node_14.x focal InRelease
+Hit:2 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:6 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3,807 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,469 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [32.4 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [3,345 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [3,330 kB]
+Get:12 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [29.7 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1,172 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [3,196 kB]
+Fetched 16.6 MB in 18s (918 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+247 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcurl4
+The following packages will be upgraded:
+  curl libcurl4
+2 upgraded, 0 newly installed, 0 to remove and 245 not upgraded.
+Need to get 396 kB of archives.
+After this operation, 10.2 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 curl amd64 7.68.0-1ubuntu2.21 [161 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4 amd64 7.68.0-1ubuntu2.21 [235 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 396 kB in 1s (575 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 78853 files and directories currently installed.)
+Preparing to unpack .../curl_7.68.0-1ubuntu2.21_amd64.deb ...
+Unpacking curl (7.68.0-1ubuntu2.21) over (7.68.0-1ubuntu2.7) ...
+Preparing to unpack .../libcurl4_7.68.0-1ubuntu2.21_amd64.deb ...
+Unpacking libcurl4:amd64 (7.68.0-1ubuntu2.21) over (7.68.0-1ubuntu2.7) ...
+Setting up libcurl4:amd64 (7.68.0-1ubuntu2.21) ...
+Setting up curl (7.68.0-1ubuntu2.21) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  iproute2 libatm1 libmnl0 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libxslt1.1 libxtables12 nginx-common nginx-core
+Suggested packages:
+  iproute2-doc fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  iproute2 libatm1 libmnl0 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libxslt1.1 libxtables12 nginx nginx-common nginx-core
+0 upgraded, 12 newly installed, 0 to remove and 245 not upgraded.
+Need to get 1,677 kB of archives.
+After this operation, 5,710 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libmnl0 amd64 1.0.4-2 [12.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxtables12 amd64 1.8.4-3ubuntu2.1 [28.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 iproute2 amd64 5.5.0-1ubuntu1 [858 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libatm1 amd64 1:2.5.1-4 [21.8 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1.4 [37.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1.4 [14.8 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxslt1.1 amd64 1.1.34-4ubuntu0.20.04.1 [151 kB]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1.4 [13.0 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1.4 [42.9 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1.4 [67.4 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1.4 [425 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1.4 [3,620 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1,677 kB in 0s (5,585 kB/s)
+Selecting previously unselected package libmnl0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 78853 files and directories currently installed.)
+Preparing to unpack .../00-libmnl0_1.0.4-2_amd64.deb ...
+Unpacking libmnl0:amd64 (1.0.4-2) ...
+Selecting previously unselected package libxtables12:amd64.
+Preparing to unpack .../01-libxtables12_1.8.4-3ubuntu2.1_amd64.deb ...
+Unpacking libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Selecting previously unselected package iproute2.
+Preparing to unpack .../02-iproute2_5.5.0-1ubuntu1_amd64.deb ...
+Unpacking iproute2 (5.5.0-1ubuntu1) ...
+Selecting previously unselected package libatm1:amd64.
+Preparing to unpack .../03-libatm1_1%3a2.5.1-4_amd64.deb ...
+Unpacking libatm1:amd64 (1:2.5.1-4) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../04-nginx-common_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx-common (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../05-libnginx-mod-http-image-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../06-libxslt1.1_1.1.34-4ubuntu0.20.04.1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../07-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../08-libnginx-mod-mail_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../09-libnginx-mod-stream_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../10-nginx-core_1.18.0-0ubuntu1.4_amd64.deb ...
+Unpacking nginx-core (1.18.0-0ubuntu1.4) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../11-nginx_1.18.0-0ubuntu1.4_all.deb ...
+Unpacking nginx (1.18.0-0ubuntu1.4) ...
+Setting up nginx-common (1.18.0-0ubuntu1.4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libatm1:amd64 (1:2.5.1-4) ...
+Setting up libmnl0:amd64 (1.0.4-2) ...
+Setting up libxtables12:amd64 (1.8.4-3ubuntu2.1) ...
+Setting up libxslt1.1:amd64 (1.1.34-4ubuntu0.20.04.1) ...
+Setting up libnginx-mod-mail (1.18.0-0ubuntu1.4) ...
+Setting up iproute2 (5.5.0-1ubuntu1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1.4) ...
+Setting up libnginx-mod-stream (1.18.0-0ubuntu1.4) ...
+Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1.4) ...
+Setting up nginx-core (1.18.0-0ubuntu1.4) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up nginx (1.18.0-0ubuntu1.4) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+Processing triggers for man-db (2.9.1-1) ...
+
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+W: Operation was interrupted before it could finish
+start: unrecognized service
+enable: unrecognized service
+rm: cannot remove '/etc/nginx/site-available/*': No such file or directory
+rm: cannot remove '/etc/nginx/site-enabled/*~': No such file or directory
+ln: failed to create symbolic link '/etc/nginx/site-enabled/default': No such file or directory
+ * Restarting nginx nginx
+   ...done.
