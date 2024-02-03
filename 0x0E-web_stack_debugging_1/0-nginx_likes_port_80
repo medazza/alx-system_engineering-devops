@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# # fix nginx listening on port 80
+# fix nginx listening on port 80
 sudo apt update
 sudo apt install curl -y
 sudo apt install nginx -y
@@ -9,3 +9,4 @@ rm /etc/nginx/site-available/*
 rm /etc/nginx/site-enabled/*~
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/site-enabled/default
 sudo service nginx restart
+
