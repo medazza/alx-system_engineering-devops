@@ -45,5 +45,7 @@ chmod +x your-script.sh
 
 For more in-depth information and best practices related to SSH, refer to reputable sources like the [OpenSSH documentation](https://www.openssh.com/manual.html).
 
+
+---
 ## Author
 * **AZZA MOHAMED** [AZZA](https://github.com/medazza)- ALX-Africa SE Student cohort 17
