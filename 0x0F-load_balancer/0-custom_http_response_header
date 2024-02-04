@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # configure web-02 to be identical to web-01
-# Bash script during your web server project
-# and they’ll now come in handy to easily configure web-02
 
 sudo apt-get update
 sudo apt-get install -y nginx

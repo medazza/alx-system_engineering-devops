@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
-# Install and configure HAproxy on your lb-01 server.
+# Install and configure HAproxy on your lb-01 server
 
 sudo apt-get -y update
 sudo apt install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.4 -y
 sudo apt install haproxy=2.4.\*
 
-# the load balancer's configuration
 DOMAIN_NAME='alx-azza.tech'
 INIT_FILE='/etc/default/haproxy'
 CONFIG_FILE='/etc/haproxy/haproxy.cfg'
