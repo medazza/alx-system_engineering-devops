@@ -1,0 +1,19 @@
+typing a URL into your web browser initiates a complex yet seamless journey through various stages:
+
+Browser Cache Lookup: Checking if the browser has previously visited the website and has cached information, bypassing the need for further resolution.
+
+Operating System and Hosts File: Seeking assistance from the operating system to locate the website's IP address through the hosts file.
+
+DNS Request: Resolving the IP address of the website through DNS queries, translating human-readable URLs into machine-readable IP addresses.
+
+Resolver Check: Checking the Resolver server, often provided by your ISP, for the IP address, and if uncertain, proceeding to the next step.
+
+Root Server Inquiry: Contacting the root DNS server to inquire about the IP address and checking its cache for availability.
+
+TLD Server: Redirecting to the TLD server associated with the domain to inspect its cache for the IP address.
+
+Authoritative Name Server: Connecting to at least one authoritative name server if previous steps fail to yield the IP address.
+
+Once the IP address is obtained, the browser establishes a TCP connection, ensuring organized communication between your device and the server. Data packets may encounter firewalls for inspection and undergo HTTPS/SSL encryption to secure data exchange. Load balancers distribute traffic across servers to optimize performance, while web servers process incoming requests and fetch resources like HTML files and images. Application servers may generate dynamic content, interacting with databases if necessary.
+
+In essence, this intricate process, from DNS resolution to data retrieval and presentation, illustrates the collaborative effort of various components, culminating in the seamless delivery of web content to your browser, transforming a simple URL entry into a rich and immersive web experience.
