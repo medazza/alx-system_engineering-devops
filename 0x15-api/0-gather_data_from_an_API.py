@@ -30,7 +30,7 @@ def fetch_employee_todo_progress(empId):
     # Extract relevant information
     employee_name = user_data.get('name')
     total_tasks = len(todo_data)
-    completed_tasks = [task for task in todo_data if  task.get('completed')]
+    completed_tasks = [task for task in todo_data if task.get('completed')]
 
     # Display the progress
     print(f"Employee {employee_name} is done with "
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         sys.exit(1)
     try:
         employee_id = int(sys.argv[1])
-    except:
+    except ValueError:
         print("Employee ID must be an integer")
         sys.exit(1)
     fetch_employee_todo_progress(employee_id)
