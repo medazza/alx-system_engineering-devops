@@ -5,11 +5,11 @@ import requests
 import sys
 
 
-def fetchemployeetodoprogress(empId):
+def fetch_employee_todo_progress(empId):
     if empId == 0:
         sys.exit(1)
     # API endpoint for fetching user data
-    userurl = f'https://jsonplaceholder.typicode.com/users/%7BempId%7D'
+    user_url = f'https://jsonplaceholder.typicode.com/users/{empId}'
     # API endpoint for fetching TODO data
     todo_url = f'https://jsonplaceholder.typicode.com/todos?userId={empId}'
 
@@ -30,18 +30,18 @@ def fetchemployeetodoprogress(empId):
     # Extract relevant information
     employee_name = user_data.get('name')
     total_tasks = len(todo_data)
-    completed_tasks = [task for task in todo_data if task.get('completed') is True]
+    done_tasks = [task for task in todo_data if task.get('completed') is True]
 
     # Display the progress
     print(f"Employee {employee_name} is done with "
-          f"tasks({len(completed_tasks)}/{total_tasks}):")
+          f"tasks({len(done_tasks)}/{total_tasks}):")
 
     # Display titles of completed tasks
-    for task in completed_tasks:
+    for task in done_tasks:
         print(f"\t{task.get('title')}")
 
 
-if __name == "__main":
+if __name__ == "__main__":
     # Check if the script is provided with an employee ID
     if len(sys.argv) != 2:
         print("Usage: python3 script_name.py <employee_id>")
