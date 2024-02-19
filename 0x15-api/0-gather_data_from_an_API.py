@@ -42,7 +42,7 @@ def fetchemployeetodoprogress(empId):
 
 
 if __name == "__main":
-    # Check if script is provided with an employee ID
+    # Check if the script is provided with an employee ID
     if len(sys.argv) != 2:
         print("Usage: python3 script_name.py <employee_id>")
         sys.exit(1)
