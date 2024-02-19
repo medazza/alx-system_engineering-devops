@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ Write a Python script that, using this REST API, for a given employee ID
     export data in the CSV format."""
+import csv
 import requests
 import sys
-import csv
 
 
 def fetch_employee_todo_progress(empId):
