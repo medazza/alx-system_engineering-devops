@@ -34,14 +34,6 @@ def fetch_employee_todo_progress(empId):
     total_tasks = len(todo_data)
     done_tasks = [task for task in todo_data if task.get('completed') is True]
 
-    # Display the progress
-    print(f"Employee {employee_name} is done with "
-          f"tasks({len(done_tasks)}/{total_tasks}):")
-
-    # Display titles of completed tasks
-    for task in done_tasks:
-        print(f"\t{task.get('title')}")
-
     # Exporting to CSV
     CSV_FILE_NAME = f"{user_id}.csv"
     with open(CSV_FILE_NAME, mode='w', newline='') as csv_file:
