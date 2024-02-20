@@ -1,38 +1,28 @@
 #!/usr/bin/python3
-""" Write a Python script that, using this REST API, for a given employee ID
-    returns information about his/her TODO list progress."""
+"""Python script to export data in the JSON format."""
 import json
 import requests
 import sys
 
 
-def fetch_employee_todo_progress(u_id):
-    if u_id == 0:
-        sys.exit(1)
-    # base url
+def export_to_json(user_id):
     b_url = "https://jsonplaceholder.typicode.com/"
-    # API endpoint for fetching user data
-    USER_DATA = requests.get(f"{b_url}users/{u_id}").json()
-    # API endpoint for fetching TODO data
-    TODO_DATA = requests.get(f"{b_url}todos", params={"userId": u_id}).json()
+    user = requests.get(f"{b_url}users/{user_id}").json()
+    todos = requests.get(f"{b_url}todos", params={"userId": user_id}).json()
 
-    # Extracting relevant information
-    task_data = [
+    data_task = [
         {
             "task": todo["title"],
             "completed": todo["completed"],
-            "username": USER_DATA["username"],
+            "username": user["username"],
         }
-        for todo in TODO_DATA
+        for todo in todos
     ]
-    with open(f"{u_id}.json", "w") as jsonfile:
-        json.dump({u_id: task_data}, jsonfile)
+
+    with open(f"{user_id}.json", "w") as jsonfile:
+        json.dump({user_id: data_task}, jsonfile)
 
 
 if __name__ == "__main__":
-    # Check if the script is provided with an employee ID
-    if len(sys.argv) != 2:
-        print("Usage: python3 script_name.py <employee_id>")
-        sys.exit(1)
-    EMPLOYEE_ID = sys.argv[1]
-    fetch_employee_todo_progress(EMPLOYEE_ID)
+    user_id = sys.argv[1]
+    export_to_json(user_id)

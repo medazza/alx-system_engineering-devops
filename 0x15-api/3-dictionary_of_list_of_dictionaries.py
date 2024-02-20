@@ -8,7 +8,7 @@ def fetch_all_employee_data():
     base_url = "https://jsonplaceholder.typicode.com/"
     users = requests.get(f"{base_url}users").json()
 
-    all_employee_data = {
+    employes_data = {
         user["id"]: [
             {
                 "task": todo["title"],
@@ -22,7 +22,7 @@ def fetch_all_employee_data():
         for user in users
     }
 
-    return all_employee_data
+    return employes_data
 
 
 if __name__ == "__main__":
