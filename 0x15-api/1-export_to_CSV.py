@@ -8,11 +8,11 @@ import sys
 def export_to_csv(user_id):
     b_url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(f"{b_url}users/{user_id}").json()
-    todo_data = requests.get(f"{b_url}todos", params={"userId": user_id}).json()
+    todoData = requests.get(f"{b_url}todos", params={"userId": user_id}).json()
 
     with open(f"{user_id}.csv", "w", newline="") as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
-        for todo in todo_data:
+        for todo in todoData:
             writer.writerow(
                 [user_id, user["username"], todo["completed"], todo["title"]]
             )
