@@ -23,7 +23,7 @@ def fetch_employee_todo_progress(u_id):
     DONE_TASKS = [task for task in TODO_DATA if task.get('completed') is True]
 
     # Exporting to CSV
-    CSV_FILE_NAME = f"{u_id}.csv"
+    CSV_FILE_NAME = f"{USER_ID}.csv"
     with open(CSV_FILE_NAME, mode='w', newline='') as csv_file:
         fieldnames = ['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS',
                       'TASK_TITLE']
@@ -33,7 +33,7 @@ def fetch_employee_todo_progress(u_id):
         # Writing CSV rows
         for task in TODO_DATA:
             writer.writerow({
-                'USER_ID': u_id,
+                'USER_ID': USER_ID,
                 'USERNAME': EMPLOYEE_NAME,
                 'TASK_COMPLETED_STATUS': task.get('completed'),
                 'TASK_TITLE': task.get('title')
