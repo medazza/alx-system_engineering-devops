@@ -9,10 +9,12 @@ import sys
 def fetch_employee_todo_progress(empId):
     if empId == 0:
         sys.exit(1)
+    # base url
+    base_url = "https://jsonplaceholder.typicode.com/"
     # API endpoint for fetching user data
-    USER_URL = f'https://jsonplaceholder.typicode.com/users/{empId}'
+    USER_URL = requests.get(f"{base_url}users/{empId}")
     # API endpoint for fetching TODO data
-    TODO_URL = f'https://jsonplaceholder.typicode.com/todos?userId={empId}'
+    TODO_URL = requests.get(f"{base_url}todos", params={"userId": empId})
 
     # Fetching user data
     USER_RESPONSE = requests.get(USER_URL)
