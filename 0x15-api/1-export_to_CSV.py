@@ -6,28 +6,16 @@ import requests
 import sys
 
 
-def fetch_employee_todo_progress(empId):
-    if empId == 0:
+def fetch_employee_todo_progress(user_id):
+    if user_id == 0:
         sys.exit(1)
     # base url
     base_url = "https://jsonplaceholder.typicode.com/"
     # API endpoint for fetching user data
-    USER_URL = requests.get(f"{base_url}users/{empId}")
+    USER_DATA = requests.get(f"{base_url}users/{user_id}").json()
     # API endpoint for fetching TODO data
-    TODO_URL = requests.get(f"{base_url}todos", params={"userId": empId})
-
-    # Fetching user data
-    USER_RESPONSE = requests.get(USER_URL)
-    if USER_RESPONSE.status_code != 200:
-        print("Error: Unable to fetch user data")
-        sys.exit(1)
-    USER_DATA = USER_RESPONSE.json()
-    # Fetching TODO data
-    TODO_RESPONSE = requests.get(TODO_URL)
-    if TODO_RESPONSE.status_code != 200:
-        print("Error: Unable to fetch todos data")
-        sys.exit(1)
-    TODO_DATA = TODO_RESPONSE.json()
+    TODO_DATA = requests.get(f"{base_url}todos", params={"userId": user_id}).json()
+    
     # Extracting relevant information
     EMPLOYEE_NAME = USER_DATA.get('name')
     USER_ID = USER_DATA.get('id')
@@ -45,12 +33,11 @@ def fetch_employee_todo_progress(empId):
         # Writing CSV rows
         for task in TODO_DATA:
             writer.writerow({
-                'USER_ID': USER_ID,
+                'USER_ID': user_id,
                 'USERNAME': EMPLOYEE_NAME,
                 'TASK_COMPLETED_STATUS': task.get('completed'),
                 'TASK_TITLE': task.get('title')
             })
-
     print(f"\nData exported to {CSV_FILE_NAME}")
 
 
@@ -59,6 +46,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python3 script_name.py <employee_id>")
         sys.exit(1)
-
-    EMPLOYEE_ID = int(sys.argv[1])
+    EMPLOYEE_ID = sys.argv[1]
     fetch_employee_todo_progress(EMPLOYEE_ID)
