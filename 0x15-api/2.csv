@@ -1,21 +1,21 @@
 USER_ID,USERNAME,TASK_COMPLETED_STATUS,TASK_TITLE
-2,Ervin Howell,FALSE,suscipit repellat esse quibusdam voluptatem incidunt
-2,Ervin Howell,TRUE,distinctio vitae autem nihil ut molestias quo
-2,Ervin Howell,FALSE,et itaque necessitatibus maxime molestiae qui quas velit
-2,Ervin Howell,FALSE,adipisci non ad dicta qui amet quaerat doloribus ea
-2,Ervin Howell,TRUE,voluptas quo tenetur perspiciatis explicabo natus
-2,Ervin Howell,TRUE,aliquam aut quasi
-2,Ervin Howell,TRUE,veritatis pariatur delectus
-2,Ervin Howell,FALSE,nesciunt totam sit blanditiis sit
-2,Ervin Howell,FALSE,laborum aut in quam
-2,Ervin Howell,TRUE,nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis
-2,Ervin Howell,FALSE,repudiandae totam in est sint facere fuga
-2,Ervin Howell,FALSE,earum doloribus ea doloremque quis
-2,Ervin Howell,FALSE,sint sit aut vero
-2,Ervin Howell,FALSE,porro aut necessitatibus eaque distinctio
-2,Ervin Howell,TRUE,repellendus veritatis molestias dicta incidunt
-2,Ervin Howell,TRUE,excepturi deleniti adipisci voluptatem et neque optio illum ad
-2,Ervin Howell,FALSE,sunt cum tempora
-2,Ervin Howell,FALSE,totam quia non
-2,Ervin Howell,FALSE,doloremque quibusdam asperiores libero corrupti illum qui omnis
-2,Ervin Howell,TRUE,totam atque quo nesciunt
+2,Ervin Howell,not completed,suscipit repellat esse quibusdam voluptatem incidunt
+2,Ervin Howell,completed,distinctio vitae autem nihil ut molestias quo
+2,Ervin Howell,not completed,et itaque necessitatibus maxime molestiae qui quas velit
+2,Ervin Howell,not completed,adipisci non ad dicta qui amet quaerat doloribus ea
+2,Ervin Howell,completed,voluptas quo tenetur perspiciatis explicabo natus
+2,Ervin Howell,completed,aliquam aut quasi
+2,Ervin Howell,completed,veritatis pariatur delectus
+2,Ervin Howell,not completed,nesciunt totam sit blanditiis sit
+2,Ervin Howell,not completed,laborum aut in quam
+2,Ervin Howell,completed,nemo perspiciatis repellat ut dolor libero commodi blanditiis omnis
+2,Ervin Howell,not completed,repudiandae totam in est sint facere fuga
+2,Ervin Howell,not completed,earum doloribus ea doloremque quis
+2,Ervin Howell,not completed,sint sit aut vero
+2,Ervin Howell,not completed,porro aut necessitatibus eaque distinctio
+2,Ervin Howell,completed,repellendus veritatis molestias dicta incidunt
+2,Ervin Howell,completed,excepturi deleniti adipisci voluptatem et neque optio illum ad
+2,Ervin Howell,not completed,sunt cum tempora
+2,Ervin Howell,not completed,totam quia non
+2,Ervin Howell,not completed,doloremque quibusdam asperiores libero corrupti illum qui omnis
+2,Ervin Howell,completed,totam atque quo nesciunt

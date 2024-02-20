@@ -45,9 +45,9 @@ def fetch_employee_todo_progress(empId):
             writer.writerow({
                 'USER_ID': USER_ID,
                 'USERNAME': EMPLOYEE_NAME,
-                'TASK_COMPLETED_STATUS': 'completed' if task.get('completed')
-                else 'not completed',
-                'TASK_TITLE': task['title']
+                'TASK_COMPLETED_STATUS': 'True' if task.get('completed')
+                else 'False',
+                'TASK_TITLE': task.get('title')
             })
     print(f"\nData exported to {CSV_FILE_NAME}")
 
