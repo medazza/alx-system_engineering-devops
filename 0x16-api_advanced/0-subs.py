@@ -14,10 +14,15 @@ def number_of_subscribers(subreddit):
     """
     if subreddit is None or type(subreddit) is not str:
         return 0
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {"user-agent": "MyCoolReqName/1.0 (by /u/ReplyAdventurous5909)"}
+    user_agent = '/u/alx API Python for Holberton School'
+    headers = {'user-agent': user_agent}
 
-    response = requests.get(url, headers=headers)
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+
+    client = requests.session()
+    client.headers = headers
+
+    response = requests.get(url, allow_redirects=False)
     if response.status_code == 200:
         return response.json()["data"]["subscribers"]
     elif response.status_code == 404:
