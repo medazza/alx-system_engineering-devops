@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""recursive function that queries the Reddit API, parses the title of
-all hot articles, and prints a sorted count of given keywords"""
+"""Module for storing the count given words."""
 import requests
 
 
 def count_words(subreddit, word_list, word_count=None, after=None):
-    """ get recururcive """
+    """ recursive function that count given words"""
     if word_count is None:
         word_count = {}
     if subreddit is None or type(subreddit) is not str:
@@ -20,9 +19,8 @@ def count_words(subreddit, word_list, word_count=None, after=None):
                             params=params, allow_redirects=False)
     if response.status_code == 200:
         data = response.json()
-        children = data["data"]["children"]
 
-        for child in children:
+        for child in data["data"]["children"]:
             title = child["data"]["title"].lower()
 
             for word in word_list:
@@ -37,8 +35,8 @@ def count_words(subreddit, word_list, word_count=None, after=None):
         else:
             sorted_word_count = sorted(word_count.items(),
                                        key=lambda x: (-x[1], x[0]))
-            for word, count in sorted_word_count:
-                print(f"{word}: {count}")
+            for w, c in sorted_word_count:
+                print(f"{w}: {c}")
             return
     elif response.status_code == 404:
         return
