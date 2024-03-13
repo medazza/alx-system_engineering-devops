@@ -42,12 +42,12 @@ frontend alx-azza.tech-frontend
         default_backend alx-azza.tech-backend
 
 frontend alx-azza.tech-https-frontend
-        bind *:443 ssl crt /etc/ssl/alx-azza.tech/alx-azza.tech.pem
+        bind *:443 ssl crt /etc/ssl/alx-azza.tech/www.alx-azza.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend alx-azza.tech-backend
 
 backend alx-azza.tech-backend
         balance roundrobin
-        server 440328-web-01 35.153.66.132:80 check
-        server 440328-web-02 54.89.25.180:80 check
+        server 440328-web-01 100.25.182.69:80 check
+        server 440328-web-02 54.160.124.33:80 check
 #--alx-azza.tech-params-end--
