@@ -20,8 +20,8 @@ frontend $DOMAIN_NAME-frontend
         default_backend $DOMAIN_NAME-backend
 backend $DOMAIN_NAME-backend
         balance roundrobin
-        server 440328-web-01 35.153.66.132:80 check
-        server 440328-web-02 54.89.25.180:80 check
+        server 440328-web-01 100.25.182.69:80 check
+        server 440328-web-02 54.160.124.33:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
