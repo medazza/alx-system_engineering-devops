@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Configures a ufw firewall in web-01 web-02 and lb-01
 
+sudo apt-get update
+sudo apt-get install -y ufw
+
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
